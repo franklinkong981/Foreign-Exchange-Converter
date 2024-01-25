@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="/static/styles.css"/>
+        <title>{% block title %} {% endblock %}</title>
+    </head>
+    <body>
+        <h1>Welcome! Let's convert some currencies!</h1>
+        
+        <article class="main-container">
+        {% for msg in get_flashed_messages() %}
+            <p class="error-message">{{msg}}</p>
+        {% endfor %}
+
+        {% block content %} {% endblock %}
+        </article>
+    </body>
+</html>
